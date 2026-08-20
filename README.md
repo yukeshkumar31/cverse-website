@@ -102,15 +102,48 @@ Usually at `http://localhost:4173`.
 
 If you still see a parked page, attach the domain to the hosting account in GoDaddy DNS and wait for DNS to propagate.
 
-### Option B — Cloudflare Pages / Netlify / Vercel (recommended)
+### Option B — GitHub Pages + GoDaddy domain (recommended)
 
-1. Import this GitHub repo.
-2. Build command: `npm run build`
-3. Output directory: `dist`
-4. Add custom domain `cverse.co.in` (and `www`).
-5. In GoDaddy DNS, add the A / CNAME records (or nameservers) the host gives you.
+Yes. GitHub hosts the site for free. You keep `cverse.co.in` at GoDaddy and only change DNS.
 
-HTTPS is automatic on these hosts.
+#### 1. Enable GitHub Pages on the repo
+
+1. Open https://github.com/yukeshkumar31/cverse-website
+2. **Settings** → **Pages**
+3. Under **Build and deployment** → **Source**, choose **GitHub Actions**
+4. Push these files to `main` (workflow + `CNAME`), or merge the PR that adds them
+5. **Actions** tab → wait for **Deploy GitHub Pages** to finish green
+6. Temporary URL: `https://yukeshkumar31.github.io/cverse-website/`
+
+#### 2. Add custom domain in GitHub
+
+1. Repo → **Settings** → **Pages** → **Custom domain**
+2. Enter `cverse.co.in` → **Save**
+3. Check **Enforce HTTPS** after DNS is working (may take a few minutes)
+
+`public/CNAME` already contains `cverse.co.in` so builds keep the domain.
+
+#### 3. DNS in GoDaddy
+
+GoDaddy → **My Products** → **Domains** → `cverse.co.in` → **DNS**.
+
+Delete any old A / CNAME / parking records for `@` and `www`, then add:
+
+| Type | Name | Value | TTL |
+|------|------|--------|-----|
+| A | `@` | `185.199.108.153` | 1 Hour |
+| A | `@` | `185.199.109.153` | 1 Hour |
+| A | `@` | `185.199.110.153` | 1 Hour |
+| A | `@` | `185.199.111.153` | 1 Hour |
+| CNAME | `www` | `yukeshkumar31.github.io` | 1 Hour |
+
+Save → wait 5–60 minutes → open `https://cverse.co.in`.
+
+In GitHub **Settings → Pages**, the custom domain should show a green check when DNS is correct.
+
+#### Alternative: Cloudflare Pages / Vercel / Netlify
+
+Same idea: import the GitHub repo (`npm run build`, output `dist`), add `cverse.co.in`, then put that host’s DNS records in GoDaddy.
 
 ---
 
