@@ -1,8 +1,7 @@
 import { useCallback, useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
-import { LanguageProvider } from './Language'
+import { LanguageProvider, useI18n } from './Language'
 import { useLenis } from './hooks/useLenis'
-import { Cursor } from './components/Cursor'
 import { Particles } from './components/Particles'
 import { Preloader } from './components/Preloader'
 import { Navbar } from './components/Navbar'
@@ -14,18 +13,21 @@ import { Contact, Footer } from './components/Contact'
 import { waLink } from './i18n'
 
 function Site() {
+  const { t } = useI18n()
   const [ready, setReady] = useState(false)
   const onDone = useCallback(() => setReady(true), [])
   useLenis(ready)
 
   return (
     <>
-      <Cursor />
+      <a className="skip-link" href="#main">
+        {t.nav.skip}
+      </a>
       <Particles />
-      <div className="noise" />
+      <div className="noise" aria-hidden="true" />
       <AnimatePresence>{!ready && <Preloader key="boot" onDone={onDone} />}</AnimatePresence>
       <Navbar />
-      <main>
+      <main id="main">
         <Hero />
         <Marquee />
         <Stats />
@@ -42,7 +44,7 @@ function Site() {
         className="wa-float"
         href={waLink()}
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         aria-label="WhatsApp Cverse"
       >
         <svg width="28" height="28" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">

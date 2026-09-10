@@ -90,7 +90,7 @@ function TiltCard({ children, delay }: { children: ReactNode; delay: number }) {
 export function Journey() {
   const { t } = useI18n()
   return (
-    <section>
+    <section id="journey">
       <div className="wrap">
         <div className="section-head">
           <div className="kicker">{t.journey.kicker}</div>

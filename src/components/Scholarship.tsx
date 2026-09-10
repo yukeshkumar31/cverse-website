@@ -42,14 +42,10 @@ export function Scholarship() {
         >
           <div>
             <div className="kicker">{t.scholarship.kicker}</div>
-            <h2 style={{ fontSize: 'clamp(32px, 4.5vw, 52px)', margin: '12px 0 16px' }}>
-              {t.scholarship.title}
-            </h2>
-            <p style={{ color: 'var(--muted)', lineHeight: 1.7, maxWidth: '52ch' }}>
-              {t.scholarship.body}
-            </p>
-            <p style={{ margin: '18px 0 24px', color: '#d7e6f8' }}>{t.scholarship.note}</p>
-            <a className="btn btn--gold" href={waLink()} target="_blank" rel="noreferrer">
+            <h2 className="scholar__title">{t.scholarship.title}</h2>
+            <p className="scholar__body">{t.scholarship.body}</p>
+            <p className="scholar__note">{t.scholarship.note}</p>
+            <a className="btn btn--gold" href={waLink()} target="_blank" rel="noopener noreferrer">
               {t.scholarship.cta}
             </a>
           </div>
@@ -99,11 +95,11 @@ export function Why() {
 export function FAQ() {
   const { t } = useI18n()
   return (
-    <section>
+    <section id="faq" aria-labelledby="faq-title">
       <div className="wrap">
         <div className="section-head">
           <div className="kicker">{t.faq.kicker}</div>
-          <h2>{t.faq.title}</h2>
+          <h2 id="faq-title">{t.faq.title}</h2>
         </div>
         <div className="faq">
           {t.faq.items.map((item) => (

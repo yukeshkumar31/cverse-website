@@ -50,7 +50,7 @@ function Magnetic({
       onMouseMove={move}
       onMouseLeave={leave}
       target={href.startsWith('http') ? '_blank' : undefined}
-      rel={href.startsWith('http') ? 'noreferrer' : undefined}
+      rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
     >
       {children}
     </motion.a>
@@ -98,13 +98,13 @@ export function Hero() {
             <Magnetic className="btn btn--gold" href={waLink()}>
               {t.hero.cta}
             </Magnetic>
-            <Magnetic className="btn btn--ghost" href="#curriculum">
+            <Magnetic className="btn btn--ghost" href="#program">
               {t.hero.secondary}
             </Magnetic>
           </div>
           <div className="fun">{t.hero.fun}</div>
         </div>
-        <div className="stage">
+        <div className="stage" aria-hidden="false">
           <motion.figure
             className="polaroid polaroid--1"
             initial={{ y: 40, opacity: 0, rotate: -14 }}
@@ -112,7 +112,14 @@ export function Hero() {
             transition={{ delay: 0.3, duration: 0.9 }}
             whileHover={{ rotate: -2, y: -8, scale: 1.03 }}
           >
-            <img src="/images/poster-1.png" alt="Cverse campaign — Think. Build. Evolve." />
+            <img
+              src="/images/poster-1.png"
+              alt="Cverse campaign — Think. Build. Evolve."
+              width={560}
+              height={420}
+              decoding="async"
+              fetchPriority="high"
+            />
             <figcaption>Think. Build. Evolve.</figcaption>
           </motion.figure>
           <motion.figure
@@ -122,7 +129,14 @@ export function Hero() {
             transition={{ delay: 0.45, duration: 0.9 }}
             whileHover={{ rotate: 2, y: -10, scale: 1.03 }}
           >
-            <img src="/images/poster-2.png" alt="Cverse program for school students 8th to 12th" />
+            <img
+              src="/images/poster-2.png"
+              alt="Cverse program for school students 8th to 12th"
+              width={560}
+              height={420}
+              loading="lazy"
+              decoding="async"
+            />
             <figcaption>Let’s Fun-Code</figcaption>
           </motion.figure>
           <motion.div
