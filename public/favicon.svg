@@ -1,8 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="14" fill="#071018"/>
-  <rect x="10" y="8" width="44" height="36" rx="5" fill="#121826" stroke="#3a4558" stroke-width="2"/>
-  <rect x="14" y="12" width="36" height="26" rx="2" fill="#050914"/>
-  <path d="M44 16 H22 A4 4 0 0 0 18 20 V24 A4 4 0 0 0 22 28 H44" stroke="#3EC8FF" stroke-width="2.4" stroke-linecap="round" fill="none"/>
-  <path d="M28 44 H36 L38 52 H26 Z" fill="#2a3344"/>
-  <rect x="24" y="52" width="16" height="3" rx="1.5" fill="#3a4558"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1137 640" role="img" aria-labelledby="title desc">
+  <title id="title">C Verse logo</title>
+  <desc id="desc">Blue geometric VERSE wordmark inside a rounded frame with THINK · BUILD · EVOLVE below.</desc>
+  <path d="M 488 484 M 891 336 L 890 365  1059 365 L 1058 336 Z M 890 270 L 891 299 L 1059 298 L 1059 270 Z M 138 204 L 204 334 L 218 365 L 432 365 L 432 337 L 301 338 L 281 336 L 296 307 L 302 299 L 432 299 L 432 271 L 319 271 318 269 L 339 233 L 571 233 L 582 237 L 589 244 L 590 257 L 589 260 L 582 267 L 573 271 L 442 271 L 450 280 L 543 365 L 817 365 L 829 362 L 843 355 L 854 344 L 860 332 L 862 322 L 860 305 L 854 292 L 844 282 L 829 274 L 815 271 L 694 270 L 687 267 L 679 257 L 678 249 L 682 240 L 688 235 L 696 232 L 1059 232 L 1059 204 L 684 205 L 675 208 L 663 215 L 652 227 L 645 243 L 645 261 L 647 269 L 651 277 L 661 288 L 673 295 L 690 299 L 813 300 L 821 304 L 828 313 L 828 322 L 824 329 L 820 333 L 811 337 L 783 338 L 564 337 L 524 305 L 520 300 L 580 299 L 595 295 L 605 290 L 612 284 L 618 276 L 623 264 L 624 246 L 617 227 L 608 217 L 599 211 L 579 205 L 317 205 L 265 296 L 249 327 L 243 334 L 176 205 Z M 1059 151 L 134 153 L 120 157 L 103 167 L 88 184 L 80 202 L 78 211 L 77 242 L 77 329 L 79 359 L 82 369 L 89 383 L 96 392 L 107 402 L 126 412 L 153 416 L 1059 416 L 1059 390 L 1038 389 L 152 390 L 135 387 L 121 379 L 114 372 L 108 363 L 103 343 L 104 215 L 109 201 L 113 195 L 125 184 L 141 178 L 1059 177 Z" fill="#3F74ED" fill-rule="evenodd"/>
+<text x="82" y="493" fill="#3F74ED" font-family="Arial, Helvetica, sans-serif" font-size="40" letter-spacing="24.4">THINK · BUILD · EVOLVE</text>
 </svg>
