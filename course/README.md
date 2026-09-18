@@ -28,6 +28,7 @@ course/
 ├── weeks/                    ← day-by-day trainer + student scripts
 ├── instructor/               ← pacing, demos, rubric
 ├── reference-app/fix-my-ride/  ← final working BASE app
+├── student-projects/         ← student idea BASE apps (e.g. expense-tracker)
 └── increments/               ← day checkpoints (runnable)
 ```
 
@@ -79,6 +80,12 @@ npm install && npm run dev
 
 Then open http://localhost:5173 and login with `customer@demo.com` / `demo1234`.  
 Health check: http://localhost:8000/health
+
+## Student projects
+
+Approved student BASE apps live under `student-projects/`:
+
+- **Expense Tracker** — [student-projects/expense-tracker/README.md](student-projects/expense-tracker/README.md) (branch `student/expense-tracker`)
 
 ## Promise to students
 
