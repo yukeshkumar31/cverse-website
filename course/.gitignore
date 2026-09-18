@@ -1,0 +1,9 @@
+# Local env and dependencies (course apps)
+**/.venv/
+**/node_modules/
+**/__pycache__/
+**/.env
+**/dist/
+**/.DS_Store
+*.pyc
+*.db
