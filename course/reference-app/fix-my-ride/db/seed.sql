@@ -1,0 +1,13 @@
+-- Optional SQL seed.
+-- Prefer letting the FastAPI app create demo users on startup
+-- (password hashing is then guaranteed correct for demo1234).
+--
+-- If you use SQL seed for structure demos only, insert bikes/bookings
+-- AFTER users exist (created via /auth/register or app startup).
+
+-- Example after users id=1 (customer) exists:
+-- INSERT INTO bikes (owner_id, make, model, registration_number)
+-- VALUES (1, 'Honda', 'Activa', 'TN28AB1234');
+--
+-- INSERT INTO bookings (customer_id, bike_id, service_type, status, notes)
+-- VALUES (1, 1, 'General service', 'booked', 'Brake noise');
