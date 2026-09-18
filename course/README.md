@@ -56,9 +56,29 @@ course/
 | 7 | Basic auth + roles |
 | 8 | Polish, GitHub, enhance-later backlog |
 
-## Run the final Fix-My-Ride base
+## Run and test the Fix-My-Ride base
 
-See [reference-app/fix-my-ride/README.md](reference-app/fix-my-ride/README.md).
+Full **run / verify / deploy** guide:
+
+→ **[reference-app/fix-my-ride/README.md](reference-app/fix-my-ride/README.md)**
+
+Quick test (two terminals):
+
+```bash
+# Terminal 1 — API
+cd course/reference-app/fix-my-ride/backend
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+cp -n .env.example .env
+uvicorn app.main:app --reload --port 8000
+
+# Terminal 2 — UI
+cd course/reference-app/fix-my-ride/frontend
+npm install && npm run dev
+```
+
+Then open http://localhost:5173 and login with `customer@demo.com` / `demo1234`.  
+Health check: http://localhost:8000/health
 
 ## Promise to students
 
